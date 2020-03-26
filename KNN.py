@@ -1,17 +1,11 @@
 import pandas as pd
 import numpy as np
-import pandas_profiling
-import matplotlib
 import matplotlib.pyplot as plt 
-from sklearn import tree
-from sklearn.utils import shuffle 
-from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV
-from sklearn.datasets import load_iris
+from sklearn.model_selection import (train_test_split, cross_val_score, GridSearchCV, StratifiedShuffleSplit)
 from sklearn.metrics import precision_recall_fscore_support,classification_report, confusion_matrix, recall_score, precision_score, accuracy_score, classification_report, f1_score
-from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.neighbors import KNeighborsClassifier
 
-matplotlib.use('tkagg') # only MacPro needs this line to plot images
+# matplotlib.use('tkagg') # only MacPro needs this line to plot images
 
 ## step 1: Data preprocess
 data = pd.read_csv("data.csv", header=None) #read the data
