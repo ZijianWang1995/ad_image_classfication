@@ -9,4 +9,4 @@
 
 - The SVM owns best accuracy while its efficiency is not good. For more details, please read the report.
 
-![Alt text](/path/three_compare.png)
+![Alt text](three_compare.png)
