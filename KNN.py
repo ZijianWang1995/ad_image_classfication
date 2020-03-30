@@ -23,13 +23,13 @@ X_train, X_test, y_train, y_test = train_test_split(df_data, df_label, test_size
 
 ## Step 3 build and search best parameters for KNN
 k_range = range(1,31)
-weights_options=['uniform','distance']
+weights_options=['distance']
 param = {'n_neighbors':k_range, 'weights':weights_options}
 cv = StratifiedShuffleSplit(n_splits=10, random_state=15)
 
 # estimator = knn, param_grid = param, n_jobs = -1 to instruct scikit learn to use all available processors. 
 grid = GridSearchCV(KNeighborsClassifier(), param,cv=cv,verbose = False, n_jobs=-1)
-grid.fit(X_train,y_train)
+grid.fit(X_train, y_train)
 
 knn = grid.best_estimator_
 y_pred = knn.predict(X_test)
