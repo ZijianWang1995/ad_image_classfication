@@ -7,4 +7,4 @@
 
 - Three machine learning algorithms are adopted, including *decision tree, k-nearest neigbhour and support vector machine*.
 
-The SVM owns best accuracy while its efficiency is not good. For more details, please read the report.
+-The SVM owns best accuracy while its efficiency is not good. For more details, please read the report.
